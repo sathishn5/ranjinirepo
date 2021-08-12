@@ -1,0 +1,117 @@
+﻿kind: BuildConfig
+apiVersion: build.openshift.io/v1
+metadata:
+  name: php-helloworld
+  namespace: uxcwhf-console
+  selfLink: >-
+    /apis/build.openshift.io/v1/namespaces/uxcwhf-console/buildconfigs/php-helloworld
+  uid: de7bfc09-f31d-4662-b3ec-120b1e2b3f41
+  resourceVersion: '80826033'
+  creationTimestamp: '2021-08-12T16:35:42Z'
+  labels:
+    app: php-helloworld
+    app.kubernetes.io/component: php-helloworld
+    app.kubernetes.io/instance: php-helloworld
+    app.kubernetes.io/name: php
+    app.kubernetes.io/part-of: php-helloworld
+    app.openshift.io/runtime: php
+    app.openshift.io/runtime-version: 7.3-ubi8
+  annotations:
+    app.openshift.io/vcs-ref: console
+    app.openshift.io/vcs-uri: 'https://github.com/sathishn5/DO180-apps'
+    openshift.io/generated-by: OpenShiftWebConsole
+  managedFields:
+    - manager: Mozilla
+      operation: Update
+      apiVersion: build.openshift.io/v1
+      time: '2021-08-12T16:35:42Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:metadata':
+          'f:annotations':
+            .: {}
+            'f:app.openshift.io/vcs-ref': {}
+            'f:app.openshift.io/vcs-uri': {}
+            'f:openshift.io/generated-by': {}
+          'f:labels':
+            .: {}
+            'f:app': {}
+            'f:app.kubernetes.io/component': {}
+            'f:app.kubernetes.io/instance': {}
+            'f:app.kubernetes.io/name': {}
+            'f:app.kubernetes.io/part-of': {}
+            'f:app.openshift.io/runtime': {}
+            'f:app.openshift.io/runtime-version': {}
+        'f:spec':
+          'f:output':
+            'f:to':
+              .: {}
+              'f:kind': {}
+              'f:name': {}
+          'f:runPolicy': {}
+          'f:source':
+            'f:contextDir': {}
+            'f:git':
+              .: {}
+              'f:ref': {}
+              'f:uri': {}
+            'f:type': {}
+          'f:strategy':
+            'f:sourceStrategy':
+              .: {}
+              'f:from':
+                .: {}
+                'f:kind': {}
+                'f:name': {}
+                'f:namespace': {}
+            'f:type': {}
+    - manager: openshift-apiserver
+      operation: Update
+      apiVersion: build.openshift.io/v1
+      time: '2021-08-12T16:35:42Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:spec':
+          'f:triggers': {}
+        'f:status':
+          'f:lastVersion': {}
+spec:
+  triggers:
+    - type: Generic
+      generic:
+        secretReference:
+          name: php-helloworld-generic-webhook-secret
+    - type: GitHub
+      github:
+        secretReference:
+          name: php-helloworld-github-webhook-secret
+    - type: ImageChange
+      imageChange:
+        lastTriggeredImageID: >-
+          image-registry.openshift-image-registry.svc:5000/openshift/php@sha256:d23c4d3f24bc86e85d7b1b6eff0654124ce873cbaff34c1b01349be98c14163f
+    - type: ConfigChange
+  runPolicy: Serial
+  source:
+    type: Git
+    git:
+      uri: 'https://github.com/sathishn5/DO180-apps'
+      ref: console
+    contextDir: php-helloworld
+  strategy:
+    type: Source
+    sourceStrategy:
+      from:
+        kind: ImageStreamTag
+        namespace: openshift
+        name: 'php:7.3-ubi8'
+  output:
+    to:
+      kind: ImageStreamTag
+      name: 'php-helloworld:latest'
+  resources: {}
+  postCommit: {}
+  nodeSelector: null
+  successfulBuildsHistoryLimit: 5
+  failedBuildsHistoryLimit: 5
+status:
+  lastVersion: 1
