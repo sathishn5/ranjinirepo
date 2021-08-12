@@ -1,0 +1,184 @@
+    1  netstat -ntpl
+    2  oc logs pod mysql-1-kgm54
+    3  oc get pods
+    4  vi /etc/resolv.conf 
+    5  xmodmap -e "remove lock = Caps_Lock"
+    6  xset -q
+    7  xmodmap -e "remove lock = Caps Lock"
+    8  xmodmap -e "remove lock = 00"
+    9  xset -q
+   10  xmodmap -e "remove lock = 00"
+   11  xset -q
+   12  sdfdsf
+   13  xset -q
+   14  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
+   15  vi /etc/resolv.conf 
+   16  [2~
+   17  sddfdsf,
+   18  l
+   19  s
+   20  clear
+   21  dig mail.gmail.com
+   22  dig smtp.gmail.com
+   23  yum install mail
+   24  yum install mailx
+   25  ls
+   26  mailx -a Downloads/buildconfig-php-helloworld.yaml -S "test mail" dejavucomplete@gmail.com
+   27  grep dejavu /var/log/maillog 
+   28  mailx -a Downloads/buildconfig-php-helloworld.yaml -S "test mail" dejavucomplete@gmail.com< Downloads/buildconfig-php-helloworld.yaml 
+   29  mail -s "test mail" -t dejavucomplete@gmail.com -A Downloads/buildconfig-php-helloworld.yaml 
+   30  mail -s "test mail" -t dejavucomplete@gmail.com dejavucomplete@gmail.com -A Downloads/buildconfig-php-helloworld.yaml 
+   31  grep dejavu /var/log/maillog 
+   32  man mail
+   33  mail -s "test mail" -t dejavucomplete@gmail.com dejavucomplete@gmail.com -a Downloads/buildconfig-php-helloworld.yaml 
+   34  mail -s "test mail" -t dejavucomplete@gmail.com dejavucomplete@gmail.com -a Downloads/buildconfig-php-helloworld.yaml < dejavucomplete@gmail.com
+   35  mail -s "test mail" -t dejavucomplete@gmail.com -r dejavucomplete@gmail.com -a Downloads/buildconfig-php-helloworld.yaml < dejavucomplete@gmail.com
+   36  mail -s "test mail" -t dejavucomplete@gmail.com -r dejavucomplete@gmail.com -a Downloads/buildconfig-php-helloworld.yaml
+   37  mail -s "test mail" -t dejavucomplete@gmail.com -r dejavucomplete@gmail.com -a Downloads/buildconfig-php-helloworld.yaml dejavucomplete@gmail.com
+   38  cat /root/dead.letter 
+   39  grep dejavu /var/log/maillog 
+   40  grep dejavu /var/log/messages 
+   41  mail -s "test mail" -a Downloads/buildconfig-php-helloworld.yaml dejavucomplete@gmail.com
+   42  yum install sendmail
+   43  mail -s "test mail" -a Downloads/buildconfig-php-helloworld.yaml dejavucomplete@gmail.com
+   44  grep dejavu /var/log/maillog 
+   45  yum install postfix
+   46  vi /etc/postfix/main.cf
+   47  systemctl stop sendmail
+   48  postfix start
+   49  grep dejavu /var/log/maillog 
+   50  mailq
+   51  mail -s "test mail" -a Downloads/buildconfig-php-helloworld.yaml dejavucomplete@gmail.com
+   52  grep dejavu /var/log/maillog 
+   53  mail -s "test mail" -a Downloads/buildconfig-php-helloworld.yaml sathish_8605@yahoo.co.in
+   54  grep sathish /var/log/maillog 
+   55  ip s
+   56  ip a
+   57  hostanme
+   58  hostname
+   59  dig mx gmail.com
+   60  mail -s "test mail" -a Downloads/buildconfig-php-helloworld.yaml dejavucomplete@gmail.com
+   61  grep deja /var/log/maillog 
+   62  mailq
+   63  grep deja /var/log/maillog 
+   64  telnet 216.58.220.101 25
+   65  dig mx gmail.com
+   66  dig mx gmail.com | grep gmail-smtp-in.l
+   67  dig mx gmail.com | grep gmail-smtp-in.l.google
+   68  dig mx gmail.com | grep gmail-smtp-in.l.google | grep 5 
+   69  dig mx gmail.com | grep gmail-smtp-in.l.google | grep 5  | awk -F " " '{print $6}'
+   70  dig mx gmail.com | grep gmail-smtp-in.l.google | grep 5  | awk -F " " '{print $6}' >> /etc/postfix/main.cf
+   71  vi /etc/postfix/main.cf
+   72  postfix stop
+   73  postfix start
+   74  mail -s "test mail" -a Downloads/buildconfig-php-helloworld.yaml dejavucomplete@gmail.com
+   75  grep dejavu /var/log/maillog 
+   76  telnet 74.125.23.26 25
+   77  telnet smtp.sifycorp.com 25
+   78  telnet smtp.yahoo.com 25
+   79  su student
+   80  cp Downloads/buildconfig-php-helloworld.yaml /home/student/DO180-apps/
+   81  cd /home/student/DO180-apps/
+   82  ls -ltrh
+   83  git status
+   84  git add buildconfig-php-helloworld.yaml 
+   85  git commit .
+   86  git add *
+   87  git commit -m "i have changed"
+   88  git log
+   89  git remote add origin https://github.com/sathishn5/DO180-apps
+   90  git push -u origin master
+   91  cd /home/student/DO180
+   92  cd /home/student/DO180-apps/
+   93  ls -ltrh
+   94  git commit -m "updated yaml"
+   95  git push -u origin master
+   96  cd /home/student/DO180-apps/
+   97  git push -u origin master
+   98  git status
+   99  git push -u origin master
+  100  git remote add mybranch https://github.com/sathishn5
+  101* ls
+  102  git remote add mybranch https://github.com/sathishn5/
+  103  git remote add mybranch https://github.com/sathishn5/ranjini.repo
+  104  git remote add ranjini https://github.com/sathishn5/ranjini.repo
+  105  ls -ltrh
+  106  find . name ranjini
+  107  ls -ltrh
+  108  mkdir ranjini
+  109  ls -ltrh
+  110  cd ranjini/
+  111  ls -ltrh
+  112  cd ..
+  113  ls -ltrh
+  114  mv buildconfig-php-helloworld.yaml ranjini/
+  115  cd ranjini/
+  116  ls -ltrh
+  117  git add buildconfig-php-helloworld.yaml 
+  118  git commit -m "ranjini"
+  119  git branch -M main
+  120  git remote add origin https://github.com/sathishn5/ranjini.git
+  121  git push -u origin master
+  122  git remote add origin https://github.com/sathishn5/ranjinirepo.git
+  123  git push -u origin master
+  124  cd 
+  125  git remote add https://sathishn5/ranjinirepo.git
+  126  git remote add https://github.com/sathishn5/ranjinirepo.git
+  127  git remote add https://github.com/sathishn5/ranjinirepo
+  128  git remote add https://github.com/sathishn5/DO180-apps
+  129  .git
+  130  git remote add https://github.com/sathishn5/DO180-apps.git
+  131  git remote add https://github.com/sathishn5/ranjinirepo
+  132  git init
+  133  git remote add https://github.com/sathishn5/ranjinirepo.git
+  134  git remote add openshift https://github.com/sathishn5/ranjinirepo.git
+  135  ls -ltrh
+  136  find /home -name *.yaml
+  137  cp /home/student/DO180-apps/ranjini/buildconfig-php-helloworld.yaml .
+  138  ls -ltrh
+  139  git commit -m "openshift"
+  140  git add buildconfig-php-helloworld.yaml 
+  141  git commit -m "openshift"
+  142  git push -u origin master
+  143  ls -ltrh
+  144  ls -ltrha
+  145  cd .git/
+  146  ls -ltrh
+  147  cd logs/
+  148  ls -ltrh
+  149  cat HEAD 
+  150  cd 
+  151  ls -ltrh
+  152  mkdir ranjini
+  153  mv buildconfig-php-helloworld.yaml ranjini/
+  154  git add ranjini
+  155  git remote add ranjini https://github.com/sathishn5/ranjinirepo
+  156  git remote add ranjini https://github.com/sathishn5/ranjinirepo.git
+  157  git status
+  158  cd ranjini/
+  159  ls -ltrh
+  160  git push buildconfig-php-helloworld.yaml
+  161  git push --set-upstream buildconfig-php-helloworld.yaml
+  162  git push --set-upstream buildconfig-php-helloworld.yaml master
+  163  git push --set-upstream buildconfig-php-helloworld.yaml https://github.com/sathishn5/ranjinirepo.git master
+  164  git push --set-upstream buildconfig-php-helloworld.yaml https://github.com/sathishn5/ranjinirepo.git
+  165  git push --set-upstream buildconfig-php-helloworld.yaml https://github.com/sathishn5/ranjinirepo
+  166  git clone https://github.com/sathishn5/ranjinirepo
+  167  ls -ltrh
+  168  cd ranjinirepo/
+  169  ls -ltrh
+  170  cd ..
+  171  mv buildconfig-php-helloworld.yaml ranjinirepo/
+  172  cd ranjinirepo/
+  173  ls -ltrh
+  174  git status
+  175  git checkout -b testbranch
+  176  git add .
+  177  git commit -am "test"
+  178  git push --set-upstream origin testbranch
+  179  cp /root/Downloads/*.yaml .
+  180  ls -ltrh
+  181  git add .
+  182  git commit -m "adding yaml"
+  183  git push --set-upstream origin testbranch
+  184  history > history
