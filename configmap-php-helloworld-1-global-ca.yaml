@@ -1,0 +1,35 @@
+﻿kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: php-helloworld-1-global-ca
+  namespace: uxcwhf-console
+  selfLink: /api/v1/namespaces/uxcwhf-console/configmaps/php-helloworld-1-global-ca
+  uid: 18a1dd40-4a93-4fd7-aea5-cbcb216c4ac2
+  resourceVersion: '80826040'
+  creationTimestamp: '2021-08-12T16:35:43Z'
+  ownerReferences:
+    - apiVersion: v1
+      kind: Pod
+      name: php-helloworld-1-build
+      uid: bc433369-24ab-48fa-bdb5-0d5c80b3de68
+  managedFields:
+    - manager: openshift-controller-manager
+      operation: Update
+      apiVersion: v1
+      time: '2021-08-12T16:35:43Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:data':
+          .: {}
+          'f:ca-bundle.crt': {}
+        'f:metadata':
+          'f:ownerReferences':
+            .: {}
+            'k:{"uid":"bc433369-24ab-48fa-bdb5-0d5c80b3de68"}':
+              .: {}
+              'f:apiVersion': {}
+              'f:kind': {}
+              'f:name': {}
+              'f:uid': {}
+data:
+  ca-bundle.crt: ''

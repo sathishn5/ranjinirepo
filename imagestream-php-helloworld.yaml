@@ -1,0 +1,68 @@
+﻿kind: ImageStream
+apiVersion: image.openshift.io/v1
+metadata:
+  annotations:
+    app.openshift.io/vcs-ref: console
+    app.openshift.io/vcs-uri: 'https://github.com/sathishn5/DO180-apps'
+    openshift.io/generated-by: OpenShiftWebConsole
+  selfLink: >-
+    /apis/image.openshift.io/v1/namespaces/uxcwhf-console/imagestreams/php-helloworld
+  resourceVersion: '80863121'
+  name: php-helloworld
+  uid: 5669dc9b-cf7e-4b2d-8897-b78936633a53
+  creationTimestamp: '2021-08-12T16:35:42Z'
+  generation: 1
+  managedFields:
+    - manager: Mozilla
+      operation: Update
+      apiVersion: image.openshift.io/v1
+      time: '2021-08-12T16:35:42Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:metadata':
+          'f:annotations':
+            .: {}
+            'f:app.openshift.io/vcs-ref': {}
+            'f:app.openshift.io/vcs-uri': {}
+            'f:openshift.io/generated-by': {}
+          'f:labels':
+            .: {}
+            'f:app': {}
+            'f:app.kubernetes.io/component': {}
+            'f:app.kubernetes.io/instance': {}
+            'f:app.kubernetes.io/name': {}
+            'f:app.kubernetes.io/part-of': {}
+            'f:app.openshift.io/runtime': {}
+            'f:app.openshift.io/runtime-version': {}
+  namespace: uxcwhf-console
+  labels:
+    app: php-helloworld
+    app.kubernetes.io/component: php-helloworld
+    app.kubernetes.io/instance: php-helloworld
+    app.kubernetes.io/name: php
+    app.kubernetes.io/part-of: php-helloworld
+    app.openshift.io/runtime: php
+    app.openshift.io/runtime-version: 7.3-ubi8
+spec:
+  lookupPolicy:
+    local: false
+status:
+  dockerImageRepository: >-
+    image-registry.openshift-image-registry.svc:5000/uxcwhf-console/php-helloworld
+  publicDockerImageRepository: >-
+    default-route-openshift-image-registry.apps.ap46.prod.nextcle.com/uxcwhf-console/php-helloworld
+  tags:
+    - tag: latest
+      items:
+        - created: '2021-08-12T18:04:24Z'
+          dockerImageReference: >-
+            image-registry.openshift-image-registry.svc:5000/uxcwhf-console/php-helloworld@sha256:8aa70ef33b142fe3da13072647bf3a35006d95cae4d917c1c8cdcb1936e965b8
+          image: >-
+            sha256:8aa70ef33b142fe3da13072647bf3a35006d95cae4d917c1c8cdcb1936e965b8
+          generation: 1
+        - created: '2021-08-12T16:36:22Z'
+          dockerImageReference: >-
+            image-registry.openshift-image-registry.svc:5000/uxcwhf-console/php-helloworld@sha256:f74a5105ea8c4566821f2fcb92fa75a8c93d665ba91bf58783d17e7d19cc36bb
+          image: >-
+            sha256:f74a5105ea8c4566821f2fcb92fa75a8c93d665ba91bf58783d17e7d19cc36bb
+          generation: 1

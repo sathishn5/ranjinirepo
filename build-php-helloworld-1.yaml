@@ -1,0 +1,137 @@
+﻿kind: Build
+apiVersion: build.openshift.io/v1
+metadata:
+  annotations:
+    openshift.io/build-config.name: php-helloworld
+    openshift.io/build.number: '1'
+    openshift.io/build.pod-name: php-helloworld-1-build
+  selfLink: >-
+    /apis/build.openshift.io/v1/namespaces/uxcwhf-console/builds/php-helloworld-1
+  resourceVersion: '80826368'
+  name: php-helloworld-1
+  uid: 85287216-c122-4b4f-9d1f-64b328515057
+  creationTimestamp: '2021-08-12T16:35:42Z'
+  namespace: uxcwhf-console
+  ownerReferences:
+    - apiVersion: build.openshift.io/v1
+      kind: BuildConfig
+      name: php-helloworld
+      uid: de7bfc09-f31d-4662-b3ec-120b1e2b3f41
+      controller: true
+  labels:
+    app: php-helloworld
+    app.kubernetes.io/part-of: php-helloworld
+    app.kubernetes.io/instance: php-helloworld
+    openshift.io/build-config.name: php-helloworld
+    app.kubernetes.io/component: php-helloworld
+    openshift.io/build.start-policy: Serial
+    buildconfig: php-helloworld
+    app.openshift.io/runtime: php
+    app.kubernetes.io/name: php
+    app.openshift.io/runtime-version: 7.3-ubi8
+spec:
+  nodeSelector: null
+  output:
+    to:
+      kind: ImageStreamTag
+      name: 'php-helloworld:latest'
+    pushSecret:
+      name: builder-dockercfg-p6mxs
+  resources: {}
+  triggeredBy:
+    - message: Image change
+      imageChangeBuild:
+        imageID: >-
+          image-registry.openshift-image-registry.svc:5000/openshift/php@sha256:d23c4d3f24bc86e85d7b1b6eff0654124ce873cbaff34c1b01349be98c14163f
+        fromRef:
+          kind: ImageStreamTag
+          namespace: openshift
+          name: 'php:7.3-ubi8'
+  strategy:
+    type: Source
+    sourceStrategy:
+      from:
+        kind: DockerImage
+        name: >-
+          image-registry.openshift-image-registry.svc:5000/openshift/php@sha256:d23c4d3f24bc86e85d7b1b6eff0654124ce873cbaff34c1b01349be98c14163f
+      pullSecret:
+        name: builder-dockercfg-p6mxs
+  postCommit: {}
+  serviceAccount: builder
+  source:
+    type: Git
+    git:
+      uri: 'https://github.com/sathishn5/DO180-apps'
+      ref: console
+    contextDir: php-helloworld
+  revision:
+    type: Git
+    git:
+      commit: f7cd8963ef353d9173c3a21dcccf402f3616840b
+      author:
+        name: Jordi Sola
+        email: someth2say@gmail.com
+      committer:
+        name: Jordi Sola
+        email: someth2say@gmail.com
+      message: 'Initial commit, including all apps previously in course'
+status:
+  output:
+    to:
+      imageDigest: 'sha256:f74a5105ea8c4566821f2fcb92fa75a8c93d665ba91bf58783d17e7d19cc36bb'
+  config:
+    kind: BuildConfig
+    namespace: uxcwhf-console
+    name: php-helloworld
+  outputDockerImageReference: >-
+    image-registry.openshift-image-registry.svc:5000/uxcwhf-console/php-helloworld:latest
+  duration: 40000000000
+  startTimestamp: '2021-08-12T16:35:43Z'
+  stages:
+    - name: FetchInputs
+      startTime: '2021-08-12T16:35:46Z'
+      durationMilliseconds: 1311
+      steps:
+        - name: FetchGitSource
+          startTime: '2021-08-12T16:35:46Z'
+          durationMilliseconds: 1311
+    - name: PullImages
+      startTime: '2021-08-12T16:35:50Z'
+      durationMilliseconds: 29426
+      steps:
+        - name: PullBaseImage
+          startTime: '2021-08-12T16:35:50Z'
+          durationMilliseconds: 29426
+    - name: Build
+      startTime: '2021-08-12T16:36:19Z'
+      durationMilliseconds: 2939
+      steps:
+        - name: DockerBuild
+          startTime: '2021-08-12T16:36:19Z'
+          durationMilliseconds: 2939
+    - name: PushImage
+      startTime: '2021-08-12T16:36:22Z'
+      durationMilliseconds: 444
+      steps:
+        - name: PushImage
+          startTime: '2021-08-12T16:36:22Z'
+          durationMilliseconds: 444
+  conditions:
+    - type: New
+      status: 'False'
+      lastUpdateTime: '2021-08-12T16:35:43Z'
+      lastTransitionTime: '2021-08-12T16:35:43Z'
+    - type: Pending
+      status: 'False'
+      lastUpdateTime: '2021-08-12T16:35:46Z'
+      lastTransitionTime: '2021-08-12T16:35:46Z'
+    - type: Running
+      status: 'False'
+      lastUpdateTime: '2021-08-12T16:36:23Z'
+      lastTransitionTime: '2021-08-12T16:36:23Z'
+    - type: Complete
+      status: 'True'
+      lastUpdateTime: '2021-08-12T16:36:23Z'
+      lastTransitionTime: '2021-08-12T16:36:23Z'
+  completionTimestamp: '2021-08-12T16:36:23Z'
+  phase: Complete
